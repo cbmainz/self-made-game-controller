@@ -1,5 +1,5 @@
 // Beispiel Code für einen Arduino Pro Micro und zwei Arcade-Button die beim drücken Tastaturbefehle senden.
-// Per USB an einen Computer angeschlossen, kann so ein einfacher GameController gebaut werden.
+// Per USB an einen Computer angeschlossen, kann so der Arduino Pro Micro als einfacher GameController mit zwei Arcade-Button benutzt werden.
 
 #include <Bounce2.h> // Bindet die Bounce2-Bibliothek ein
 #include <Keyboard.h> // Bindet die Tatstur-Bibliothek ein
@@ -17,9 +17,8 @@ const char key_two = ' '; // hier die LEERTASTE für button_two
 Bounce button_one = Bounce();
 Bounce button_two = Bounce();
 
-void setup()
-{
-  // Setup Code, wierd beim Start einmal aufgerufen:
+// Setup Code, wird beim Start einmal aufgerufen:
+void setup() {
 
   // Richtet den Arduino als Tastatur ein:
   Keyboard.begin();
@@ -33,14 +32,12 @@ void setup()
   button_two.attach( BUTTON_TWO );
   button_one.interval(5);
   button_two.interval(5);
-}
+} // Ende vom Setup
 
-void loop()
-{
-  // Haupteil des Programmes, dieser Code wird immer wiederholt:
-
+// Haupteil des Programmes, dieser Code wird immer wiederholt
+void loop() {
+  
   // Wenn-Abfrage für den ersten Button:
-
   // button_one.update ist Wahr, wenn sich der Staus von button_one ändert.
   if (button_one.update()) {
 
@@ -52,9 +49,9 @@ void loop()
     else if (button_one.rose()) {
       Keyboard.release(key_one);
     }
-  }
-  // Wenn-Abfrage für den zweiten Button:
+  } // Ende der Wenn-Abfrage für den ersten Button
   
+  // Wenn-Abfrage für den zweiten Button:
   // button_two.update ist Wahr, wenn sich der Staus von button_two ändert.
   if (button_two.update()) {
 
@@ -66,6 +63,6 @@ void loop()
     else if (button_two.rose()) {
       Keyboard.release(key_two);
     }
-  } 
- }
+  } // Ende der Wenn-Abfrage für den zweiten Button
+ } // Ende vom Loop
  
