@@ -17,7 +17,8 @@ const char key_two = ' '; // hier die LEERTASTE für button_two
 Bounce button_one = Bounce();
 Bounce button_two = Bounce();
 
-void setup() {
+void setup()
+{
   // Setup Code, wierd beim Start einmal aufgerufen:
 
   // Richtet den Arduino als Tastatur ein:
@@ -34,7 +35,8 @@ void setup() {
   button_two.interval(5);
 }
 
-void loop() {
+void loop()
+{
   // Haupteil des Programmes, dieser Code wird immer wiederholt:
 
   // Wenn-Abfrage für den ersten Button:
@@ -64,6 +66,6 @@ void loop() {
     else if (button_two.rose()) {
       Keyboard.release(key_two);
     }
-  }
+  } 
  }
  
