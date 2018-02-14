@@ -7,6 +7,6 @@ Wer in medienpädagogischen Projekten [Makey Makey](http://makeymakey.com) einse
 
 [Heiko Wolf](http://dermedienwolf.de) hat das ganze auf [Medienpädagogik Praxis Camp 2017](https://barcamptools.eu/mppb17/praxiscafe) demonstriert.
 
-Der Code findet ihr hier auf Github, eine Bauanleitung folgt noch.
+Der Code findet ihr hier auf Github und die [Bauanleitung](https://github.com/cbmainz/self-made-game-controller/blob/master/Anleitung.pdf) jetzt auch.
 
 Ein schönes Spiel für einen Arcade-Button ist [Canabalt](http://adamatomic.com/canabalt/mega/) von [adamatomic.com](http://adamatomic.com/)
